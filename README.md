@@ -1,50 +1,106 @@
-# React + TypeScript + Vite
+# Chat Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
+Esta es una aplicación de chat moderna desarrollada con React y TypeScript, utilizando una arquitectura modular y componentes UI reutilizables basados en Radix UI y Tailwind CSS.
 
-Currently, two official plugins are available:
+## Estructura del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+src/
+├── app/
+│   ├── public/
+│   │   └── chat/
+│   │       ├── ChatPage.tsx
+│   │       └── index.ts
+│   └── index.ts
+├── assets/
+│   └── react.svg
+├── components/
+│   └── ui/
+│       ├── accordion.tsx
+│       ├── alert-dialog.tsx
+│       ├── alert.tsx
+│       ├── aspect-ratio.tsx
+│       ├── avatar.tsx
+│       ├── badge.tsx
+│       ├── breadcrumb.tsx
+│       ├── button.tsx
+│       ├── calendar.tsx
+│       ├── card.tsx
+│       ├── carousel.tsx
+│       ├── chart.tsx
+│       ├── checkbox.tsx
+│       ├── collapsible.tsx
+│       ├── command.tsx
+│       ├── context-menu.tsx
+│       ├── dialog.tsx
+│       ├── drawer.tsx
+│       ├── dropdown-menu.tsx
+│       └── form.tsx
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Características Principales
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Interfaz Modular**: Arquitectura basada en componentes reutilizables
+- **Componentes UI Avanzados**: Implementación de elementos UI complejos como:
+  - Acordeones
+  - Diálogos de alerta
+  - Avatares
+  - Breadcrumbs
+  - Carruseles
+  - Gráficos
+  - Menús contextuales
+  - Formularios
+  - Y más...
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Tecnologías Utilizadas
+
+- React
+- TypeScript
+- Radix UI
+- Tailwind CSS
+- CMDK
+- Lucide React
+- React Hook Form
+- Vaul
+
+## Componentes UI Destacados
+
+### ChatPage
+El componente principal que renderiza la interfaz de chat utilizando `ChatScreen` del módulo de chat.
+
+### Componentes de UI
+- **Accordion**: Componente colapsable para mostrar/ocultar contenido
+- **Alert**: Sistema de alertas y notificaciones
+- **Avatar**: Componente para mostrar imágenes de perfil
+- **Button**: Botones personalizables con diferentes variantes
+- **Calendar**: Selector de fechas
+- **Carousel**: Carrusel de contenido
+- **Chart**: Componente para visualización de datos
+- **Form**: Sistema de formularios con validación
+
+## Instalación
+
+```bash
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
+npm run dev
 ```
+
+## Uso
+
+La aplicación proporciona una interfaz de chat accesible a través de la ruta principal, donde los usuarios pueden interactuar con el sistema de mensajería.
+
+## Contribución
+
+1. Fork el repositorio
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
